@@ -1,9 +1,13 @@
 import React from "react";
+import UserDisplay from "./UserDisplay";
+import Button from "./Button";
 
-const App = () => {
-    return (
-        <div>App</div>
-    );
+export default class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <UserDisplay/>
+            </div>
+        );
+    }
 };
-
-export default App;

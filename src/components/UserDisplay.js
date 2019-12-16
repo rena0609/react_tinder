@@ -19,13 +19,22 @@ export class UserDisplay extends React.Component {
 
     render() {
         return (
-            <div>
-                <img alt="img" src={this.state.img}/>
-                <div>{this.state.name}</div>
-                <div>{this.state.age}</div>
-                <button onClick={this.handleClick}>Like</button>
-                <button onClick={this.handleClick}>Nope</button>
+            <div className="ui container">
+                <div className="ui segments">
+                    <div className="ui segment card">
+                        <div className="image">
+                            <img alt="img" src={this.state.img}/>
+                        </div>
+                        <div className="content">
+                            <div className="header">{this.state.name}, {this.state.age}</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="ui center aligned header">
+                    <button className="ui button" onClick={this.handleClick}>Like</button>
+                    <button className="ui button" onClick={this.handleClick}>Nope</button>
+                </div>
             </div>
         )
     }
-}
+};
